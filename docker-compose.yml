@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  rabbitmq-srv:
+    build:
+      context: ./docker/rabbitmq
+      dockerfile: Dockerfile
+    volumes:
+      - ./docker/rabbitmq/conf:/etc/rabbitmq
+    ports:
+      - 5672:5672
